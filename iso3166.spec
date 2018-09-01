@@ -16,7 +16,7 @@ Source0:        https://files.pythonhosted.org/packages/source/i/%{srcname}/%{sr
 BuildRequires:  pkgconfig(python2)
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3egg(setuptools)
-BuildRequires:  python2egg(setuptools)
+BuildRequires:  pythonegg(setuptools)
 BuildArch:      noarch
 
 %description
