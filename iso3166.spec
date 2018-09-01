@@ -29,11 +29,11 @@ Summary:        %{common_summary}
 %{common_description}
 
 
-%package -n python-%{srcname}
+%package -n python3-%{srcname}
 Summary:        %{common_summary}
 %{?python_provide:%python_provide python3-%{srcname}}
 
-%description -n python-%{srcname}
+%description -n python3-%{srcname}
 %{common_description}
 
 
