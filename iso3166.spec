@@ -13,8 +13,8 @@ License:        MIT
 URL:            https://github.com/deactivated/python-iso3166/
 Source0:        https://files.pythonhosted.org/packages/source/i/%{srcname}/%{srcname}-%{version}.tar.gz
 
-BuildRequires:  python2-devel
-BuildRequires:  python3-devel
+BuildRequires:  pkgconfig(python2)
+BuildRequires:  pkgconfig(python)
 BuildArch:      noarch
 
 %description
@@ -29,11 +29,11 @@ Summary:        %{common_summary}
 %{common_description}
 
 
-%package -n python3-%{srcname}
+%package -n python-%{srcname}
 Summary:        %{common_summary}
 %{?python_provide:%python_provide python3-%{srcname}}
 
-%description -n python3-%{srcname}
+%description -n python-%{srcname}
 %{common_description}
 
 
@@ -43,12 +43,12 @@ Summary:        %{common_summary}
 
 %build
 %py2_build
-%py3_build
+%py_build
 
 
 %install
 %py2_install
-%py3_install
+%py_install
 
 
 %files -n python2-%{srcname}
@@ -60,4 +60,4 @@ Summary:        %{common_summary}
 %files -n python3-%{srcname}
 %doc CHANGES README.rst
 %license LICENSE.txt
-%{python3_sitelib}/*
+%{python_sitelib}/*
