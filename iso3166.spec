@@ -5,13 +5,13 @@ codes. python-iso3166 is a self-contained module that converts between these\
 codes and the corresponding country name.
 
 Name:           python-%{srcname}
-Version:        0.9
+Version:	1.0
 Release:        2
 Summary:        %{common_summary}
 
 License:        MIT
 URL:            https://github.com/deactivated/python-iso3166/
-Source0:        https://files.pythonhosted.org/packages/source/i/%{srcname}/%{srcname}-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/0e/ae/0b4ee6f5f3f197b1508f21044f8b18508bc04dd4bc1be98d57d7c720330f/iso3166-1.0.tar.gz
 
 BuildRequires:  pkgconfig(python2)
 BuildRequires:  pkgconfig(python)
