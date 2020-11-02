@@ -5,19 +5,21 @@ codes. python-iso3166 is a self-contained module that converts between these\
 codes and the corresponding country name.
 
 Name:           python-%{srcname}
-Version:	1.0.1
+Version:        1.0.1
 Release:        1
 Summary:        %{common_summary}
 
 License:        MIT
 URL:            https://github.com/deactivated/python-iso3166/
-Source0:	https://files.pythonhosted.org/packages/5b/62/b0f573e5d9ea128084f2440924e95f4e54690ccee9d974b5bf345e5f8540/iso3166-1.0.1.tar.gz
+Source0:	https://files.pythonhosted.org/packages/5b/62/b0f573e5d9ea128084f2440924e95f4e54690ccee9d974b5bf345e5f8540/%{srcname}-%{version}.tar.gz
 
 BuildRequires:  pkgconfig(python2)
 BuildRequires:  pkgconfig(python)
-BuildRequires:  python3egg(setuptools)
-BuildRequires:  pythonegg(setuptools)
+BuildRequires:  python2dist(setuptools)
+BuildRequires:  python3dist(setuptools)
 BuildArch:      noarch
+Provides:       python3-%{srcname}
+%{?python_provide:%python_provide python3-%{srcname}}
 
 %description
 %{common_description}
@@ -27,13 +29,6 @@ Summary:        %{common_summary}
 %{?python_provide:%python_provide python2-%{srcname}}
 
 %description -n python2-%{srcname}
-%{common_description}
-
-%package -n python3-%{srcname}
-Summary:        %{common_summary}
-%{?python_provide:%python_provide python3-%{srcname}}
-
-%description -n python3-%{srcname}
 %{common_description}
 
 %prep
@@ -52,7 +47,7 @@ Summary:        %{common_summary}
 %license LICENSE.txt
 %{python2_sitelib}/*
 
-%files -n python3-%{srcname}
+%files
 %doc CHANGES README.rst
 %license LICENSE.txt
 %{python_sitelib}/*
