@@ -6,7 +6,7 @@ codes and the corresponding country name.
 
 Name:           python-%{srcname}
 Version:	2.0.2
-Release:	1
+Release:	2
 Summary:        %{common_summary}
 
 License:        MIT
