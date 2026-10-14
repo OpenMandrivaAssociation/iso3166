@@ -6,14 +6,15 @@ codes and the corresponding country name.
 
 Name:           python-%{srcname}
 Version:	2.1.1
-Release:	2
+Release:	3
 Summary:        %{common_summary}
 
 License:        MIT
+Group:          Development/Python
 URL:            https://github.com/deactivated/python-iso3166/
 Source0:	https://files.pythonhosted.org/packages/source/i/%{srcname}/%{srcname}-%{version}.tar.gz
 
-BuildRequires:  pkgconfig(python)
+BuildRequires:  pkgconfig(python3)
 BuildRequires:  python%{pyver}dist(setuptools)
 BuildRequires:  python%{pyver}dist(pip)
 BuildRequires:  python%{pyver}dist(wheel)
